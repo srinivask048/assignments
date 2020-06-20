@@ -1,0 +1,8 @@
+@import "colors";
+@import "staticpaths";
+
+body {
+    background: $bb-white url($bg-image-path) fixed center;
+    background-size: 100%;
+    overflow: hidden;
+}
