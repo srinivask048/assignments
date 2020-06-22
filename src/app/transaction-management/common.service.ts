@@ -16,7 +16,7 @@ export class CommonService {
     let transactionData: ITransaction[];
     this._http.get('../../../assets/Data/Api/transactions.json').subscribe(respData => {
       transactionData = respData['data'];
+      this.ngRedux.dispatch({type: ADDALL_TRANSACTIONS, transactions: transactionData});
     });
-    this.ngRedux.dispatch({type: ADDALL_TRANSACTIONS, transactions: transactionData});
   }
 }
