@@ -10,7 +10,7 @@ import {Observable} from 'rxjs';
 })
 export class TransactionComponent implements OnInit {
   // transactions;
-  @select('transactions') transx;
+  @select('transactions') transxns;
   txns: Array<ITransaction>;
   @select() transactions$: Observable<ITransaction[]>;
   constructor(private ngRedux: NgRedux<IAppState>) {
@@ -21,11 +21,11 @@ export class TransactionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.transactions$.subscribe(currentState => {
-      this.txns = currentState;
-      console.log(this.transactions$);
-    });
-    
+    // this.transactions$.subscribe(currentState => {
+    //   this.txns = currentState;
+    //   console.log(this.transactions$);
+    // });
+    // this.transactions$ = this.ngRedux.select('transaction');
   }
 
 }

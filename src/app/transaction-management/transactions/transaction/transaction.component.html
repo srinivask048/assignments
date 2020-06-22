@@ -1,3 +1,8 @@
-<div *ngFor="let txn of transx | async">
-    <div>{{txn.amount}}</div>
+<div *ngFor="let txn of transxns | async">
+    <span>{{txn.amount}}</span>
+    <span>{{txn.categoryCode}}</span>
+    <span>{{txn.merchant}}</span>
+    <!-- <img src="{{txn.merchantLogo}}"> -->
+    <span>{{txn.transactionDate}}</span>
+    <span>{{txn.transactionType}}</span>
 </div>
